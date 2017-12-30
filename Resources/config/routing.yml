@@ -1,0 +1,3 @@
+itis_doctrine_entity_homepage:
+    path:     /
+    defaults: { _controller: ItisDoctrineEntityBundle:Default:index }
