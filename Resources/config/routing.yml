@@ -1,3 +1,25 @@
-itis_doctrine_entity_homepage:
+itis_doctrine_entities_list:
+    path:     /list
+    defaults: { _controller: ItisDoctrineEntityBundle:Default:list }
+    methods:  [GET]
+
+itis_doctrine_entity_get:
     path:     /
     defaults: { _controller: ItisDoctrineEntityBundle:Default:index }
+    methods:  [GET]
+
+itis_doctrine_update_entity:
+    path:     /
+    defaults: { _controller: ItisDoctrineEntityBundle:Default:update }
+    methods:  [PUT]
+
+itis_doctrine_insert_entity:
+    path:     /
+    defaults: { _controller: ItisDoctrineEntityBundle:Default:insert }
+    methods:  [POST]
+
+itis_doctrine_delete_entity:
+    path:     /{id}
+    defaults: { _controller: ItisDoctrineEntityBundle:Default:delete }
+    methods:  [DELETE]
+

@@ -1,0 +1,33 @@
+{
+  "name" : "itis/doctrineentitybundle",
+  "description" : "A bundle that displays entities your application have",
+  "type" : "symfony-bundle",
+  "authors" : [{
+    "name" : "Rishat Sadykov",
+    "email" : "r.sadickov2010@yandex.ru"
+  }],
+  "keywords" : [
+    "doctrine entity bundle"
+  ],
+  "license" : [
+    "MIT"
+  ],
+  "require" : {
+    "itis/doctrineentitybundle": "dev-master"
+  },
+  "autoload" : {
+    "psr-0" : {
+      "Itis\\DoctrineEntityBundle" : ""
+    }
+  },
+  "target-dir" : "Itis/DoctrineEntityBundle",
+  "repositories" : [{
+    "type" : "vcs",
+    "url" : "https://github.com/rishat11/DoctrineEntityBundle.git"
+  }],
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "some_version-dev"
+    }
+  }
+}
