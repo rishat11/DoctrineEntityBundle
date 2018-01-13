@@ -1,4 +1,7 @@
 services:
-#    itis_doctrine_entity.example:
-#        class: Itis\DoctrineEntityBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    Itis\DoctrineEntityBundle\EventListener\UrlConflictListener:
+        calls:
+            - [ setContainer,["@service_container"] ]
+            - [ setDoctrine,["@doctrine"] ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

@@ -192,7 +192,7 @@ class DefaultController extends Controller
     /**
      * @Route("/entities/list", name="entitiesList")
      */
-    public function listAction($entityName)
+    public function listAction()
     {
         $entityManager = $this->getDoctrine()->getManager();
         $classes = array();
@@ -203,15 +203,12 @@ class DefaultController extends Controller
             $prohibitedEntities[$prohibitedEntityK] = strtolower($prohibitedEntityV);
         }
 
-        $request = Request::createFromGlobals();
-
         foreach ($metas as $meta) {
             $nameArray = explode('\\', $meta->getName());
             $className = end($nameArray);
             if (!in_array(strtolower($className), $prohibitedEntities)) {
                 $classes[] = $className;
             }
-
         }
 
         $response = new JsonResponse();
