@@ -6,28 +6,19 @@
     "name" : "Rishat Sadykov",
     "email" : "r.sadickov2010@yandex.ru"
   }],
-  "keywords" : [
-    "doctrine entity bundle"
-  ],
-  "license" : [
-    "MIT"
-  ],
+  "keywords" : ["doctrine", "entity", "bundle"],
+  "license" : "MIT",
   "require" : {
-    "itis/doctrineentitybundle": "dev-master"
+    "doctrine/doctrine-bundle": "^1.6",
+    "doctrine/orm": "^2.5",
+    "php": ">=5.5.9",
+    "sensio/distribution-bundle": "^5.0.19",
+    "sensio/framework-extra-bundle": "^3.0.2",
+    "symfony/symfony": "3.3.*"
   },
   "autoload" : {
     "psr-0" : {
       "Itis\\DoctrineEntityBundle" : ""
-    }
-  },
-  "target-dir" : "Itis/DoctrineEntityBundle",
-  "repositories" : [{
-    "type" : "vcs",
-    "url" : "https://github.com/rishat11/DoctrineEntityBundle.git"
-  }],
-  "extra" : {
-    "branch-alias" : {
-      "dev-master" : "some_version-dev"
     }
   }
 }
